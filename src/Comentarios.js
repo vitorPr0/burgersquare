@@ -11,7 +11,7 @@ export default function Comentarios()
             <Text style={css.btntext}>Comentar</Text>
             </TouchableOpacity>
             <View style={css.comentar}>
-                <Image style={css.perfilimg} source={require("../assets/user.png")}/>
+                <Image style={css.perfilimg} source={require("../assets/usermuiec.png")}/>
                 <Text style={css.nome}>Samara Albuquerque</Text>
                 <Text style={css.data}>02/02/2022</Text>
                 <View style={css.boxcomitar}>
@@ -20,7 +20,7 @@ export default function Comentarios()
                 <Image style={css.perfilimg} source={require("../assets/lanche1.jpg")}/>
             </View>
             <View style={css.comentar}>
-                <Image style={css.perfilimg} source={require("../assets/usermuiec.png")}/>
+                <Image style={css.perfilimg} source={require("../assets/user.png")}/>
                 <Text style={css.nome}>Luís Alberto Cavalcante</Text>
                 <Text style={css.data}>03/02/2022</Text>
                 <View style={css.boxcomitar}>

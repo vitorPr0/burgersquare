@@ -3,18 +3,29 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/Home'
-<<<<<<< HEAD
 import Carrinho from './src/Carrinho'
 import Pedidos from './src/Pedidos'
-=======
+
+
 import Perfil from './src/Perfil'
 import Comentarios from './src/Comentarios';
->>>>>>> 4ceefd085920fd356d6e9eabbb158907f5a388b0
+import { useState } from 'react';
+import Login from './src/Login';
+import Cadastro from './src/Cadastro';
 
 const Tab = createBottomTabNavigator()
 export default function App() {
+
+ /* const[ logado, setLogado] = useState(false);
+  const[ cadastro, setCadastro] = useState(false);
+
+  if(!logado){
+   return(<Login setLogado={setLogado} setCadastro={setCadastro} />)
+  }
+  if(cadastro){
+    return(<Cadastro setCadastro={setCadastro} setLogado={setLogado}/>)
+  }*/
   return (
-<<<<<<< HEAD
     <NavigationContainer>
       <Tab.Navigator  initialRouteName="Home"
          screenOptions={{
@@ -26,24 +37,9 @@ export default function App() {
       >
         <Tab.Screen name="Home" component={Home}/>
         <Tab.Screen name="Pedidos" component={Pedidos}/>
-
-=======
-    <NavigationContainer >
-      <Tab.Navigator   initialRouteName="Perfil">
-        <Tab.Screen name="Home" component={Perfil}/>
->>>>>>> 4ceefd085920fd356d6e9eabbb158907f5a388b0
+        <Tab.Screen name="Comentarios" component={Comentarios}/>
+        <Tab.Screen name="Perfil" component={Perfil}/>
       </Tab.Navigator>
-
-
-
-
-         
-
-
-      
-         
-
     </NavigationContainer>
-
   );
 }
