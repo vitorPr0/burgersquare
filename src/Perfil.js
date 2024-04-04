@@ -52,7 +52,7 @@ const css = StyleSheet.create({
     },
     boxperfil:{
         width: '85%',
-        height: '8%',
+        height: '9%',
         backgroundColor: "white",
         borderRadius: 6,
         marginTop:25,
@@ -62,7 +62,7 @@ const css = StyleSheet.create({
     },
     boxsair:{
         width: '85%',
-        height: '8%',
+        height: '9%',
         backgroundColor: "white",
         borderRadius: 6,
         marginTop:25,

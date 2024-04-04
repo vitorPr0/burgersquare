@@ -34,13 +34,14 @@ const css = StyleSheet.create({
         backgroundColor: '#F5EBDC',
         flex: 1,
         alignItems: 'center'
+
     },
     box:{
         width: '80%',
         height: 400,
         backgroundColor: "white",
         borderWidth: 3,
-        borderColor: '#FF8732',
+        borderColor: '#FFBB5C',
         borderRadius:6,
         marginTop:40
 
@@ -52,12 +53,15 @@ const css = StyleSheet.create({
         marginTop: 40,
         marginLeft: 200,
         borderWidth: 3,
-        borderColor: '#FF8732',
+        borderColor: '#FFBB5C',
         borderRadius:6,
+        alignItems: "center",
+        justifyContent: "center",
     },
     texth:{
         fontSize:20,
-        padding:14
+        color: "#7A361F"
+       
     },
     img:{
         width: '80%',
@@ -70,8 +74,8 @@ const css = StyleSheet.create({
         height: 50,
         borderWidth: 3,
         borderRadius:6,
-        backgroundColor:'#FF8732',
-        borderColor: '#FF8732',
+        backgroundColor:'#FFBB5C',
+        borderColor: '#FFBB5C',
         marginTop: 10,
         marginLeft: 30
     },
@@ -80,20 +84,22 @@ const css = StyleSheet.create({
         height: 50,
         borderWidth: 3,
         borderRadius:6,
-        borderColor: '#FF8732',
+        borderColor:'#FFBB5C',
         marginTop: 10,
         marginLeft: 30
     },
     text:{
         fontSize:20,
         textAlign: "center",
-        marginTop:7
+        marginTop:7,
+        color: "#7A361F"
     },
     logo:{
         width: 170,
         height: 70,
         marginTop: 20,
-        alignItems: "center"
+        alignItems: "center",
+      
     },
     seta:{
         width: 30,
