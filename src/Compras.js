@@ -1,12 +1,15 @@
 import React from 'react'
 import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 
-export default function Compras() {
+export default function Compras({setCompras}) {
   return (
     <View style={css.container}>
        
         <Image style={css.logo} source={require("../assets/logo66.png")}/>
-        <Image style={css.seta} source={require("../assets/setAV.png")}/>
+        <TouchableOpacity onPress={() => setCompras(false)}>
+            <Image style={css.seta} source={require("../assets/setAV.png")}/>
+        </TouchableOpacity>
+      
         <Text style={css.Text} >Finalizando sua compra!</Text>
         <View style={css.box}>
 

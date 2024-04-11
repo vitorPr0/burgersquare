@@ -2,14 +2,23 @@ import { Image, View, StyleSheet, Text, ScrollView, TouchableOpacity, TextInput 
 import { NavigationContainer } from '@react-navigation/native';
 
 
-export default function Carrinho(){
+export default function Carrinho({ setCarrinho }){
 
     return(
         <View style={css.geral}>
+
+           
             <Image style={css.logo} source={require("../assets/logo66.png")}/>
-            <Image style={css.seta} source={require("../assets/setAV.png")}/>   
+
+            <TouchableOpacity onPress={() => setCarrinho(false)}>
+                <Image style={css.seta} source={require("../assets/setAV.png")} />
+            </TouchableOpacity>
+           
+           
+            
 
                 <View  style={css.carrinho}>
+                     
                     <View style={css.imgbox}>
                         <Image style={css.img} source={require("../assets/produto1.jpg")} />
                     </View>
@@ -18,8 +27,8 @@ export default function Carrinho(){
                         <Text style={css.text}>R$ 25,99</Text>
 
                         <View style={css.btns}>
-                            <TextInput style={css.um} 
-                            keyboardType="numeric">
+                            <TextInput maxLength={2} style={css.um} 
+                                keyboardType="numeric">
 
                             </TextInput>
 
@@ -28,7 +37,10 @@ export default function Carrinho(){
                             </TouchableOpacity>
 
                             <View style={css.boxtres}>
-                                <Image style={css.tres}  source={require("../assets/checklist.png")} />
+                                <TouchableOpacity> 
+                                    <Image style={css.tres}  source={require("../assets/checklist.png")} />
+                                </TouchableOpacity>
+                                
                             </View>
 
                         </View>
@@ -54,7 +66,10 @@ export default function Carrinho(){
                             </TouchableOpacity>
 
                             <View style={css.boxtres}>
-                                <Image style={css.tres}  source={require("../assets/checklist.png")} />
+                                <TouchableOpacity>
+                                    <Image style={css.tres}  source={require("../assets/checklist.png")} />
+                                </TouchableOpacity>
+                                
                             </View>
 
                         </View>
@@ -71,16 +86,16 @@ const css = StyleSheet.create({
         backgroundColor:'#F5EBDC',
         alignItems: "center"
     },
-    logo:{
-        width: 170,
-        height: 70,
-        marginTop: 20
-    },
     seta:{
         width: 30,
         height: 30,
         marginRight: 260,
         marginTop: -52
+    },
+    logo:{
+        width: 170,
+        height: 70,
+        marginTop: 20
     },
     carrinho:{
         width: "90%",

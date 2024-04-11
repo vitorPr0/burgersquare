@@ -20,7 +20,7 @@ export default function Comentarios() {
                     </View>
                     <View style={css.comentario}>
                         <Text>O lanche estava perfeito, a família toda adorou e com certeza vamos repetir!</Text>
-                        <Image style={css.comentarioImg}source={require("../assets/lanche1.jpg")} />
+                        <Image style={css.comentarioImg} source={require("../assets/lanche1.jpg")} />
                     </View>
                 </View>
                 <View style={css.comentarios}>
@@ -33,7 +33,7 @@ export default function Comentarios() {
                     </View>
                     <View style={css.comentario}>
                         <Text>Muito bom! Preços bons e uma qualidade incrível, super recomendo!</Text>
-                        <Image style={css.comentarioImg}source={require("../assets/lanche2.jpg")} />
+                        <Image style={css.comentarioImg} source={require("../assets/lanche2.jpg")} />
                     </View>
                 </View>
             </ScrollView>
@@ -74,6 +74,7 @@ const css = StyleSheet.create({
         backgroundColor: "#FFBB5C",
         marginLeft: "63%",
         marginTop: 30,
+        marginBottom: 10
 
     },
     btntext: {
@@ -91,7 +92,8 @@ const css = StyleSheet.create({
         borderColor: "#FFBB5C",
         padding: 20,
         borderRadius: 6,
-        marginTop:30
+        marginTop: 30,
+        marginBottom:10
     },
     perfil: {
         width: "100%",

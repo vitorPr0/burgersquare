@@ -1,7 +1,15 @@
 import { Text, View, StyleSheet, Button, TouchableOpacity, Image } from "react-native";
+import Mapa from "./Mapa";
+import { useState } from 'react';
 
-export default function Pedidos()
-{
+export default function Pedidos({navigation}){ 
+
+    const [mapa, setMapa] = useState(false);
+
+    if(mapa) {
+        return (<Mapa setMapa={setMapa}/>)
+        
+    }
     return(
         <View style={css.container}>
            
@@ -16,7 +24,7 @@ export default function Pedidos()
             </TouchableOpacity>
             <View style={css.box}>
                 <Image source={ require( "../assets/Burger.png")}  style={css.img}></Image>
-                <TouchableOpacity style={css.btnum} >
+                <TouchableOpacity style={css.btnum} onPress={() =>  setMapa(true)} >
                     <Text style={css.text}>Acompanhar pedido</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={css.btn} >

@@ -10,20 +10,20 @@ import Pedidos from './src/Pedidos'
 import Perfil from './src/Perfil'
 import Comentarios from './src/Comentarios';
 import Detalhes from './src/Detalhes';
-
-
 import Login from './src/Login';
 import Cadastro from './src/Cadastro';
 import Compras from './src/Compras';
+import Mapa from './src/Mapa';
 
 
 const Tab = createBottomTabNavigator()
 export default function App() {
 
-  /*
 
-  const[ logado, setLogado] = useState(false);
+
+ /* const[ logado, setLogado] = useState(false);
   const[cadastro, setCadastro] = useState(false);
+
 
     if(!logado) {
       return(<Login setLogado={setLogado} setCadastro={setCadastro}/> )
@@ -31,9 +31,10 @@ export default function App() {
 
     if(cadastro){
       return( <Cadastro setCadastro={setCadastro} setLogado={setLogado}/> )
-    }
+    }*/
 
-    */
+
+    
 
 
   return (
@@ -78,8 +79,23 @@ export default function App() {
           
         />
 
-        <Tab.Screen name="Pedidos" component={Pedidos}
+        <Tab.Screen name="Mapa" component={Mapa}       
+           
         />
+
+      <Tab.Screen name="Compras" component={Compras}       
+           
+           />
+
+        <Tab.Screen name="Comentarios" component={Comentarios}       
+           
+           />
+        
+        <Tab.Screen name="Carrinho" component={Carrinho}      
+           
+           />
+
+        
 
        
         </Tab.Navigator>

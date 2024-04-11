@@ -24,9 +24,12 @@ export default function Login({setLogado, setCadastro})
 
     return(
         <View style={css.body}>
-            <Image style={css.logo}  source={require("../assets/logo.png")} />
+          <TouchableOpacity onPress={Cadastro}>
+          <Image style={css.logo}  source={require("../assets/logo.png")} />
+          </TouchableOpacity>
+            
             <View style={css.fraselogin}>
-            <Text style={css.frase}>FAÇA SEU LOGIN,  OU CRIE UMA CONTA!</Text>
+            <Text style={css.frase}>FAÇA SEU LOGIN OU CRIE UMA CONTA!</Text>
             </View>
             <Text style={css.texto}>EMAIL:</Text>
             <TextInput placeholder='Digite seu Email' value={email} style={css.input} onChangeText={(digitado) => setEmail(digitado)} />
