@@ -19,12 +19,6 @@ import Mapa from './src/Mapa';
 const Tab = createBottomTabNavigator()
 export default function App() {
 
-<<<<<<< HEAD
-=======
-  
->>>>>>> 9206b23ecbfefebbd5d3b23ddc520cdeca2314cb
-
-
  /* const[ logado, setLogado] = useState(false);
   const[cadastro, setCadastro] = useState(false);
 
@@ -36,12 +30,6 @@ export default function App() {
     if(cadastro){
       return( <Cadastro setCadastro={setCadastro} setLogado={setLogado}/> )
     }*/
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 9206b23ecbfefebbd5d3b23ddc520cdeca2314cb
-    
 
 
   return (
