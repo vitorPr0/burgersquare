@@ -20,7 +20,7 @@ import Compras from './src/Compras';
 const Tab = createBottomTabNavigator()
 export default function App() {
 
-  /*
+  
 
   const[ logado, setLogado] = useState(false);
   const[cadastro, setCadastro] = useState(false);
@@ -33,7 +33,7 @@ export default function App() {
       return( <Cadastro setCadastro={setCadastro} setLogado={setLogado}/> )
     }
 
-    */
+    
 
 
   return (
@@ -76,9 +76,6 @@ export default function App() {
             ),
           }}
           
-        />
-
-        <Tab.Screen name="Pedidos" component={Pedidos}
         />
 
        
