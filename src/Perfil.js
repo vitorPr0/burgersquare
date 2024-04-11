@@ -1,10 +1,22 @@
+import { useState } from "react";
 import { Image, StyleSheet, View, Tab, Screen,TouchableOpacity, Text  } from "react-native";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Comentarios from "./Comentarios";
+import Login from "./Login";
 
 
 
-export default function Perfil()
+export default function Perfil({navigation})
 {
+    const[ comentarios, setComentarios] = useState(false);
+    const[ sair, setSair] = useState(false);
+
+    if(comentarios){
+        return( <Comentarios setComentarios={setComentarios}/>)
+    }
+    if(sair){
+        return(<Login setSair={setSair}/>)
+    }
     return(
         <View style={css.geral}>
             <Image style={css.voltar} source={require("../assets/setAV.png")}/>
@@ -21,10 +33,10 @@ export default function Perfil()
             <TouchableOpacity style={css.boxperfil}>
             <Text style={css.btntext}>Suporte</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={css.boxperfil}>
+            <TouchableOpacity style={css.boxperfil} onPress={() => setComentarios(true)}>
             <Text style={css.btntext}>Comentários</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={css.boxsair}>
+            <TouchableOpacity style={css.boxsair} onPress={() => setSair(true)}>
             <Image style={css.porta} source={require("../assets/porta.png")}/>
             <Text style={css.btntext}>Sair da conta</Text>
             </TouchableOpacity>

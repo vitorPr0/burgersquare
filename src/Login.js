@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { View, Image, StyleSheet, TouchableOpacity,Text, TextInput, Keyboard } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity,Text, TextInput, Keyboard, ScrollView } from "react-native";
 import { endAsyncEvent } from "react-native/Libraries/Performance/Systrace";
 import Cadastro from "./Cadastro";
 
 
-export default function Login({setLogado, setCadastro})
+
+export default function Login({setLogado, setCadastro,})
 {
     const[ email, setEmail ] = useState("");
     const[ senha, setSenha ] = useState("");
@@ -24,10 +25,8 @@ export default function Login({setLogado, setCadastro})
 
     return(
         <View style={css.body}>
-          <TouchableOpacity onPress={Cadastro}>
+          <ScrollView>
           <Image style={css.logo}  source={require("../assets/logo.png")} />
-          </TouchableOpacity>
-            
             <View style={css.fraselogin}>
             <Text style={css.frase}>FAÇA SEU LOGIN OU CRIE UMA CONTA!</Text>
             </View>
@@ -44,6 +43,12 @@ export default function Login({setLogado, setCadastro})
             <TouchableOpacity style={css.btncadastrar} onPress={Cadastro}>
             <Text style={css.btntext2}>CADASTRAR</Text>
             </TouchableOpacity>
+            <View style={css.caixa}>
+
+            </View>
+
+          </ScrollView>
+           
             
 
         </View>
@@ -132,5 +137,8 @@ const css = StyleSheet.create({
       esqs:{
         marginLeft: 35,
         marginTop: 6
+      },
+      caixa:{
+        height: 50,
       }
   });

@@ -1,9 +1,13 @@
 import { View, Image, StyleSheet, Text, TouchableOpacity, ScrollView } from "react-native";
 
-export default function Comentarios() {
+export default function Comentarios({setComentarios}) {
+
     return (
         <View style={css.geral}>
+            <TouchableOpacity onPress={() => setComentarios(false)}>
             <Image style={css.voltar} source={require("../assets/setAV.png")} />
+            </TouchableOpacity>
+
             <Image style={css.logo} source={require("../assets/logo66.png")} />
             <Text style={css.frase}>Comente sua experiência aqui! </Text>
             <TouchableOpacity style={css.btncomentar}>

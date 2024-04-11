@@ -19,6 +19,10 @@ import Mapa from './src/Mapa';
 const Tab = createBottomTabNavigator()
 export default function App() {
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9206b23ecbfefebbd5d3b23ddc520cdeca2314cb
 
 
  /* const[ logado, setLogado] = useState(false);
@@ -33,7 +37,10 @@ export default function App() {
       return( <Cadastro setCadastro={setCadastro} setLogado={setLogado}/> )
     }*/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9206b23ecbfefebbd5d3b23ddc520cdeca2314cb
     
 
 
@@ -78,26 +85,6 @@ export default function App() {
           }}
           
         />
-
-        <Tab.Screen name="Mapa" component={Mapa}       
-           
-        />
-
-      <Tab.Screen name="Compras" component={Compras}       
-           
-           />
-
-        <Tab.Screen name="Comentarios" component={Comentarios}       
-           
-           />
-        
-        <Tab.Screen name="Carrinho" component={Carrinho}      
-           
-           />
-
-        
-
-       
         </Tab.Navigator>
         </NavigationContainer>
 
