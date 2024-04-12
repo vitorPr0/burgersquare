@@ -4,11 +4,13 @@ export default function Comentarios({setComentarios}) {
 
     return (
         <View style={css.geral}>
-            <TouchableOpacity onPress={() => setComentarios(false)}>
-            <Image style={css.voltar} source={require("../assets/setAV.png")} />
-            </TouchableOpacity>
 
+            <View style={css.flex}>
+            <TouchableOpacity style={css.buton} onPress={() => setComentarios(false)}>
+                <Image style={css.seta} source={require("../assets/setAV.png")} />
+            </TouchableOpacity>
             <Image style={css.logo} source={require("../assets/logo66.png")} />
+            </View>
             <Text style={css.frase}>Comente sua experiência aqui! </Text>
             <TouchableOpacity style={css.btncomentar}>
                 <Text style={css.btntext}>Comentar</Text>
@@ -19,7 +21,7 @@ export default function Comentarios({setComentarios}) {
                         <Image style={css.perfilimg} source={require("../assets/usersamara.png")} />
                         <View style={css.perfilInfo}>
                             <Text style={css.perfilNome}>Samara Albuquerque</Text>
-                            <Text style={css.data}>02/02/2022</Text>
+                            <Text style={css.data}>08/02/2022</Text>
                         </View>
                     </View>
                     <View style={css.comentario}>
@@ -32,7 +34,7 @@ export default function Comentarios({setComentarios}) {
                         <Image style={css.perfilimg} source={require("../assets/user.png")} />
                         <View style={css.perfilInfo}>
                             <Text style={css.perfilNome}>Luís Alberto Cavalcante</Text>
-                            <Text style={css.data}>05/02/2022</Text>
+                            <Text style={css.data}>07/02/2022</Text>
                         </View>
                     </View>
                     <View style={css.comentario}>
@@ -40,6 +42,33 @@ export default function Comentarios({setComentarios}) {
                         <Image style={css.comentarioImg} source={require("../assets/lanche2.jpg")} />
                     </View>
                 </View>
+                <View style={css.comentarios}>
+                    <View style={css.perfil}>
+                        <Image style={css.perfilimg} source={require("../assets/perfilcareca.png")} />
+                        <View style={css.perfilInfo}>
+                            <Text style={css.perfilNome}>Genilson Oliveira</Text>
+                            <Text style={css.data}>05/02/2022</Text>
+                        </View>
+                    </View>
+                    <View style={css.comentario}>
+                        <Text>O lanche é muito bom, não me arrependo de comprar.</Text>
+                        <Image style={css.comentarioImg2} source={require("../assets/lanche3.jpg")} />
+                    </View>
+                </View>
+                <View style={css.comentarios}>
+                    <View style={css.perfil}>
+                        <Image style={css.perfilimg} source={require("../assets/perfilicon.png")} />
+                        <View style={css.perfilInfo}>
+                            <Text style={css.perfilNome}>Olívia Fausto Correia</Text>
+                            <Text style={css.data}>03/02/2022</Text>
+                        </View>
+                    </View>
+                    <View style={css.comentario}>
+                        <Text>Não me arrependo de ter comprado, veio bem recheado e a entrega foi rápida.</Text>
+                        <Image style={css.comentarioImg2} source={require("../assets/lanche4.jpg")} />
+                    </View>
+                </View>
+
             </ScrollView>
         </View>
     )
@@ -54,7 +83,6 @@ const css = StyleSheet.create({
         width: 170,
         height: 70,
         marginTop: 20,
-        marginLeft: "30%"
     },
     voltar: {
         width: 30,
@@ -71,6 +99,10 @@ const css = StyleSheet.create({
         marginTop: 40,
         color: "#7A361F",
     },
+    seta: {
+        width: 35,
+        height: 35,
+    },
     btncomentar: {
         width: "30%",
         height: 60,
@@ -84,7 +116,8 @@ const css = StyleSheet.create({
     btntext: {
         textAlign: "center",
         marginTop: 15,
-        fontSize: 20
+        fontSize: 20,
+        color: "#7A361F"
     },
     comentarios: {
         width: "90%",
@@ -126,6 +159,18 @@ const css = StyleSheet.create({
         height: 200,
         resizeMode: "contain",
         marginTop: 15
-    }
+    },
+    buton:{
+        width: 50,
+        height: 40,
+        marginRight: 23,
+        marginTop: 40,
+
+    },
+    flex:{
+        display:"flex",
+        marginLeft: 50,
+        flexDirection: "row",
+    },
 })
 

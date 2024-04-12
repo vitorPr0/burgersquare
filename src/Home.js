@@ -62,10 +62,10 @@ export default function Home({navigation}) {
                         <TouchableOpacity style={css.btninfo}>
                             <Text style={css.textinfo}>Mais Informações</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={css.btncomprar} onPress={() =>  setCompras(true)}>
+                        <TouchableOpacity style={css.btncomprar} >
                             <Text style={css.textcomprar}>Comprar</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={css.btncarrinho}>
+                        <TouchableOpacity style={css.btncarrinho} onPress={() =>  setCarrinho(true)}>
                             <Image style={css.imgcesta} source={require("../assets/carrinho.png")} />
                         </TouchableOpacity>
                     </View> 
@@ -80,7 +80,7 @@ export default function Home({navigation}) {
 const css = StyleSheet.create({
     geral:{
         flex: 1,
-        backgroundColor: '#F5EBDC'
+        backgroundColor: '#F5EBDC',
     },
     logo: {
         width: 170,
@@ -116,14 +116,15 @@ const css = StyleSheet.create({
     },
     btntext3: {
         marginLeft: '20%',
-        marginTop: -33,
-        fontSize: 19
+        marginTop: -32,
+        fontSize: 19,
+        color: "#7A361F",
     },
     imgcarrossel: {
         resizeMode: 'stretch',
         width: 380,
-        height: 240,
-        marginLeft: '5%',
+        height: 280,
+        marginLeft: '4%',
         marginTop: 30,
     },
     imgpesquisa: {
@@ -136,13 +137,13 @@ const css = StyleSheet.create({
     imgcupom: {
         width: 37,
         height: 37,
-        marginTop: 12,
+        marginTop:8,
         marginLeft: '5%'
     },
     imghome: {
         resizeMode: 'stretch',
         width: 340,
-        height: 260,
+        height: 290,
         marginLeft: '9%',
         marginTop: 30,
     },
@@ -159,6 +160,7 @@ const css = StyleSheet.create({
         marginLeft: "9%",
         borderWidth: 2,
         borderColor: "#FFBB5C",
+        
     },
     btncomprar: {
         width: '27%',
@@ -183,13 +185,15 @@ const css = StyleSheet.create({
     },
     textinfo: {
         fontSize: 15,
-        marginLeft: 15,
         marginTop: 9,
+        textAlign: "center",
+        color: "#7A361F",
     },
     textcomprar: {
         fontSize: 15,
         marginTop: 8,
-        marginLeft: 23,
+        textAlign: "center",
+        color: "#7A361F",
     },
     imgcesta: {
         width: 27,
@@ -198,7 +202,7 @@ const css = StyleSheet.create({
         marginLeft: 10
     },
     box: {
-        height: 150
+        height: 50
     },
     boximg:{
         display:"flex",

@@ -1,14 +1,25 @@
-import React from 'react'
-import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
+import React, { useState } from 'react'
+import { View, StyleSheet, Image, Text, TouchableOpacity, Alert } from 'react-native'
+import Pedidos from './Pedidos'
 
 export default function Compras({setCompras}) {
+    const [comprar, setComprar] = useState(false);
+    function Comprar(){
+        setComprar(true);
+        alert("Compra realizada com sucesso! Vá para a página de pedidos para mais informações.")
+    }
+
   return (
     <View style={css.container}>
-       
-        <Image style={css.logo} source={require("../assets/logo66.png")}/>
-        <TouchableOpacity onPress={() => setCompras(false)}>
-            <Image style={css.seta} source={require("../assets/setAV.png")}/>
-        </TouchableOpacity>
+
+
+            <View style={css.flex}>
+                <TouchableOpacity style={css.buton} onPress={() => setCompras(false)}>
+                    <Image style={css.seta} source={require("../assets/setAV.png")} />
+                </TouchableOpacity>
+                <Image style={css.logo} source={require("../assets/logo66.png")} />
+            </View>
+
       
         <Text style={css.Text} >Finalizando sua compra!</Text>
         <View style={css.box}>
@@ -31,14 +42,9 @@ export default function Compras({setCompras}) {
                 <Text style={css.info}>00000-0000</Text>
             </View>
 
-          
-
-            <TouchableOpacity style={css.btn} >
+            <TouchableOpacity style={css.btn} onPress={Comprar}>
                 <Text style={css.btntext} >Comprar</Text>
             </TouchableOpacity>
-
-        
-
 
         </View>
     </View>
@@ -60,16 +66,15 @@ const css = StyleSheet.create({
         borderRadius:6,
         borderColor: "#FFBB5C",
     },
-    logo:{
+    logo: {
         width: 170,
         height: 70,
-        marginTop: 20
+        marginTop: 20,
+        marginRight: 75
     },
-    seta:{
-        width: 30,
-        height: 30,
-        marginRight: 260,
-        marginTop: -52
+    seta: {
+        width: 35,
+        height: 35,
     },
     Text:{
         fontSize:20,
@@ -109,4 +114,15 @@ const css = StyleSheet.create({
         marginLeft:"5%",
         margin:5
     },
+    buton:{
+        width: 50,
+        height: 40,
+        marginRight: 40,
+        marginTop: 40,
+
+    },
+    flex:{
+        display:"flex",
+        flexDirection: "row",
+    }
 })

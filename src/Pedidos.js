@@ -15,7 +15,6 @@ export default function Pedidos({navigation}){
            
             <Image style={css.logo} source={require("../assets/logo66.png")}/>
             <View>
-            <Image style={css.seta} source={require("../assets/setAV.png")}/>
             </View>
 
 
@@ -93,13 +92,13 @@ const css = StyleSheet.create({
         borderWidth: 3,
         borderRadius:6,
         borderColor:'#FFBB5C',
-        marginTop: 10,
+        marginTop: 25,
         marginLeft: 30
     },
     text:{
         fontSize:20,
         textAlign: "center",
-        marginTop:7,
+        marginTop:8,
         color: "#7A361F"
     },
     logo:{
@@ -107,6 +106,7 @@ const css = StyleSheet.create({
         height: 70,
         marginTop: 20,
         alignItems: "center",
+        marginLeft: 5
       
     },
     seta:{

@@ -19,18 +19,7 @@ import Mapa from './src/Mapa';
 const Tab = createBottomTabNavigator()
 export default function App() {
 
-  const [logado, setLogado] = useState(false);
-  const [cadastro, setCadastro] = useState(false);
-
-
-  if (!logado) {
-    return (<Login setLogado={setLogado} setCadastro={setCadastro} />)
-  }
-
-  if (cadastro) {
-    return (<Cadastro setCadastro={setCadastro} setLogado={setLogado} />)
-  }
-
+ 
 
   return (
     <NavigationContainer>
@@ -71,8 +60,14 @@ export default function App() {
               <MaterialCommunityIcons name="account" color={color} size={size} />
             ),
           }}
-
         />
+
+
+
+
+
+
+
       </Tab.Navigator>
     </NavigationContainer>
 

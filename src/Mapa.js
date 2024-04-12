@@ -19,7 +19,7 @@ export default function Mapa({setMapa}) {
 
 const css = StyleSheet.create({
     img: {
-        width: 410,
+        width: "100%",
         height: 740,
         resizeMode: 'stretch',
     },
