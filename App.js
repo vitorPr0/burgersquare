@@ -20,6 +20,7 @@ const Tab = createBottomTabNavigator()
 export default function App() {
 
   const [logado, setLogado] = useState(false);
+  
   const [cadastro, setCadastro] = useState(false);
 
 
