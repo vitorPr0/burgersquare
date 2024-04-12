@@ -36,7 +36,7 @@ export default function Perfil({navigation})
             <TouchableOpacity style={css.boxperfil} onPress={() => setComentarios(true)}>
             <Text style={css.btntext}>Comentários</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={css.boxsair} onPress={() => setSair(true)}>
+            <TouchableOpacity style={css.boxsair}>
             <Image style={css.porta} source={require("../assets/porta.png")}/>
             <Text style={css.btntext}>Sair da conta</Text>
             </TouchableOpacity>

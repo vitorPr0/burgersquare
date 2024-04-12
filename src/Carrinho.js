@@ -75,6 +75,35 @@ export default function Carrinho({ setCarrinho }){
                         </View>
                     </View>     
                 </View>
+
+                <View  style={css.carrinho}>
+                    <View style={css.imgbox}>
+                        <Image style={css.img} source={require("../assets/lanche2.jpg")} />
+                    </View>
+                    <View style={css.boxtext}>
+                        <Text style={css.text}>X-Bacon</Text>
+                        <Text style={css.text}>R$ 20,99</Text>
+
+                        <View style={css.btns}>
+                            <TextInput style={css.um} 
+                            keyboardType="numeric">
+
+                            </TextInput>
+
+                            <TouchableOpacity style={css.dois} >
+                                <Text style={css.textdois}>Excluir</Text>
+                            </TouchableOpacity>
+
+                            <View style={css.boxtres}>
+                                <TouchableOpacity>
+                                    <Image style={css.tres}  source={require("../assets/checklist.png")} />
+                                </TouchableOpacity>
+                                
+                            </View>
+
+                        </View>
+                    </View>     
+                </View>
         </View>
     )
 }

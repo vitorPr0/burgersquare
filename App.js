@@ -32,6 +32,7 @@ export default function App() {
   }
 
 
+
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName="Home"
@@ -39,7 +40,8 @@ export default function App() {
           headerStyle: { backgroundColor: '#7A361F' },
           tabBarStyle: { backgroundColor: '#7A361F' },
           tabBarActiveTintColor: "#FFBB5C",
-          tabBarInactiveTintColor: "white"
+          tabBarInactiveTintColor: "white",
+          tabBarHideOnKeyboard: true
 
         }}
       >

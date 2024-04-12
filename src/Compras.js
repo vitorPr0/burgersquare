@@ -9,7 +9,7 @@ export default function Compras({setCompras}) {
         <TouchableOpacity onPress={() => setCompras(false)}>
             <Image style={css.seta} source={require("../assets/setAV.png")}/>
         </TouchableOpacity>
-      
+      3
         <Text style={css.Text} >Finalizando sua compra!</Text>
         <View style={css.box}>
 
