@@ -36,8 +36,6 @@ export default function Perfil({ navigation }) {
                 <Image style={css.porta} source={require("../assets/porta.png")} />
                 <Text style={css.btntext}>Sair da conta</Text>
             </TouchableOpacity>
-
-
         </View>
     )
 }
